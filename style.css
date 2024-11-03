@@ -31,8 +31,8 @@ body {
 }
 
 .welcome-message {
-    color: #fff;
-    font-size: 2.5em;
+    color: #fafafa;
+    font-size: 2.3em;
     font-weight: bold;
     text-align: center;
     animation: zoomIn 1s ease;
@@ -125,6 +125,10 @@ body {
         width: 80px;
     }
     
+    .welcome-message {
+        font-size: 1em;
+
+    }
 
     .footer {
         font-size: 0.8em; /* Reduz o tamanho do texto do rodapé */
