@@ -60,7 +60,8 @@ body {
 }
 
 #Loja{
-    width: 100px;
+    width: 60px;
+    height: 50px;
 }
 
 /* Rodapé */
@@ -68,16 +69,12 @@ body {
     text-align: center;
     padding: 1rem;
     background-color: #333;
-    font-size: 0.9em;
+    font-size: 1em;
     color: #aaa;
 }
 
 /* Responsividade para dispositivos móveis */
 @media (max-width: 600px) {
-    .welcome-message {
-        font-size: 1.8em; /* Reduz o tamanho da mensagem de boas-vindas */
-    }
-
     .link {
         font-size: 1em; /* Reduz o tamanho do texto dos links */
         padding: 12px; /* Ajusta o espaçamento dos links */
@@ -89,8 +86,14 @@ body {
         margin-right: 13px;
     }
     #Loja{
-        width: 80px;
+        width: 70px;
     }
+
+    .link-section {
+        width: 100%;
+        max-width: 350px;
+    }
+    
     
     .welcome-message {
         font-size: 1em;
