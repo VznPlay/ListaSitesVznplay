@@ -1,11 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grupo-VznPlay</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="favicon-32x32.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+        <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- fonte de letras -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+
+
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#ffffff;">
+<link rel="apple-touch-icon" href="/logo-01.png">
+
+
 
     <!-- Código do Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-37SVV7T9M3"></script>
@@ -21,47 +36,209 @@ gtag('config', 'G-37SVV7T9M3');
 </head>
 <body>
 
+    <!-- Faixa de texto rolante -->
+    <div class="banner">
+        <div class="marquee">
+            <div class="marquee-container">
+                <span class="marquee-text">🚀 Automatize Suas Vendas Com O WA Sender Clique Em <a href="https://wasenderplus.vercel.app" target="_blank">SAIBA MAIS!</a></span> <span class="marquee-text">🚀 Multiplique Seus Ganhos E Transforme Seu WhatsApp Em Uma Máquina De Vendas! <a href="https://wasenderplus.vercel.app" target="_blank">CLIQUE AQUI</a></span>
+                <!-- Duplicamos os textos para criar o loop perfeito -->
+                <span class="marquee-text">🚀 Automatize Suas Vendas Com O WA Sender Clique Em <a href="https://wasenderplus.vercel.app" target="_blank">SAIBA MAIS!</a></span> <span class="marquee-text">🚀 Multiplique Seus Ganhos E Transforme Seu WhatsApp Em Uma Máquina De Vendas! <a href="https://wasenderplus.vercel.app" target="_blank">CLIQUE AQUI</a></span>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Pop-up GERAL -->
+<div class="overlay" id="popupOverlay">
+<div class="popup-content" id="popupContent">
+    <!-- Botão de fechar no canto superior direito -->
+    <button class="fechar-btn-top" onclick="closePopup()">×</button>
+
+    <!-- Container do iframe do vídeo -->
+    <div class="video-container">
+    <iframe
+        id="popupIframe"
+        width="100%"
+        height="360"
+        src=""
+        frameborder="0"
+        allowfullscreen
+    ></iframe>
+    </div>
+</div>
+</div>
+
     <!-- Conteúdo Principal -->
     <main class="main-content">
-        <!-- Links principais -->
         <section class="link-section">
-            <a href="https://vznplay.vercel.app" target="_blank" class="link">
-                <img id="Loja" src="vamos.png" alt="Ícone Loja Da Vznplay" class="icon">
-                LOJA DA VZNPLAY
+<!--------------------------------------------------------------------->
+            <!-- Link e imagem da LOJA -->
+            <div class="link">
+            <a href="https://vznplay.vercel.app" target="_blank" class="link-content">
+        <img id="Loja" src="vamos.png" alt="Ícone Loja Da Vznplay" class="icon">
+        LOJA DA VZNPLAY
             </a>
-            <a href="https://facilitaplay.vercel.app" target="_blank" class="link">
-                <img src="facilitador.png" alt="Ícone Facilitador" class="icon">
-                FACILITADOR 2.0 {ADD M3U}
+                <div class="help-container">
+                <div id="sumir"  class="help-icon">
+                <i class="bi bi-question"></i>
+                </div>
+                    <div class="tooltip">
+                    Descubra as novidades incríveis da nossa loja VznPlay, tecnologia, estilo e inovação!
+        </div>
+    </div>
+            </div>
+<!--------------------------------------------------------------------->
+            <!-- link e imagem do FACILITADOR -->
+            <div class="link">
+            <a href="https://facilitaplay.vercel.app" target="_blank" class="link-content">
+        <img src="facilitador.png" alt="Ícone Loja Da Vznplay" class="icon">
+            FACILITADOR 2.0 {ADD M3U}
             </a>
-            <a href="https://gerenciador-seven.vercel.app" target="_blank" class="link">
-                <img src="gerenciador.png" alt="Ícone Gerenciador De Cliente" class="icon">
-                GERENCIADOR DE CLIENTE SIMPLES
+                <div class="help-container">
+                <div class="help-icon" data-id="facilitador">
+                <i class="bi bi-question"></i>
+                </div>
+                    <div class="tooltip">
+                Aproveite tudo que o Facilitador da VznPlay oferece! Clique no botão e descubra como facilitar sua vida no iptv.
+                    <button class="como-usar-btn" data-id="facilitador">Como Usar</button>
+        </div>
+    </div>
+            </div>
+<!--------------------------------------------------------------------->
+            <!-- link e imagem do GERENCIADOR DE ANUIDADE -->
+            <div class="link">
+            <a href="https://gerenciador-seven.vercel.app" target="_blank" class="link-content">
+        <img src="anuidade.png" alt="Ícone Gerenciador De Cliente" class="icon">
+            GERENCIADOR DE ANUIDADE
             </a>
-            <a href="https://macs-clientes.vercel.app" target="_blank" class="link">
-                <img src="org_macs_apps.png" alt="Ícone Gerenciar Macs e Apps" class="icon">
-                GERENCIAR MACS E APPS SIMPLES
+                <div class="help-container">
+                <div class="help-icon" data-id="anuidade">
+                <i class="bi bi-question"></i>
+                </div>
+                    <div class="tooltip">
+                    Gerencie a anuidade dos Aplicativos dos seus clientes,  clique e veja como é simples usar!
+                    <button class="como-usar-btn" data-id="anuidade">Como Usar</button>
+        </div>
+    </div>
+            </div>
+<!--------------------------------------------------------------------->
+            <!-- link e imagem do GERENCIADOR DE MACS -->
+            <div class="link">
+            <a href="https://macs-clientes.vercel.app" target="_blank" class="link-content">
+        <img id="macs" src="macs.png" alt="Ícone Gerenciador De Cliente" class="icon">
+            GERENCIADOR DE MAC'S
             </a>
-            <a href="https://t.me/antipapatesteiptvbot" target="_blank" class="link">
-                <img src="papa_teste.png" alt="Ícone Papa Teste" class="icon">
-                PAPA TESTE
+                <div class="help-container">
+                <div class="help-icon" data-id="macs">
+                <i class="bi bi-question"></i>
+                </div>
+                    <div class="tooltip">
+                    Gerencie os Macs e Keys dos seus clientes com praticidade,  saiba como usar!
+                    <button class="como-usar-btn" data-id="macs">Como Usar</button>
+                </div>
+                </div>
+            </div>
+<!--------------------------------------------------------------------->
+            <!-- link e imagem do PLANILHA DE GERENCIADOR -->
+            <div class="link">
+            <a href="https://planilhadefaturamneto.vercel.app" target="_blank" class="link-content">
+        <img id="fat" src="faturamento.png" alt="Ícone Gerenciador De Cliente" class="icon">
+            <span class="font">PLANILHA DE FATURAMENTO</span>
             </a>
-            <a href="https://sistema-sorteio.vercel.app" target="_blank" class="link">
-                <img src="sorteio.png" alt="Ícone Sorteador De Cliente" class="icon">
-                SORTEADOR DE CLIENTE
+                <div class="help-container">
+                <div class="help-icon" data-id="planilhas">
+                <i class="bi bi-question"></i>
+                </div>
+                    <div class="tooltip">
+                    Controle seus ganhos com nossa planilha prática, fácil de usar e simples para intender, conheça saiba mais.
+                    <button class="como-usar-btn" data-id="planilhas">Como Usar</button>
+                </div>
+                </div>
+            </div>
+<!--------------------------------------------------------------------->
+            <!-- link e imagem do SIMULADOR DE IR -->
+            <div class="link">
+            <a href="https://calculo-ir.vercel.app" target="_blank" class="link-content">
+        <img id="teste" src="imposto.png" alt="Ícone Gerenciador De Cliente" class="icon">
+            <span class="font">SIMULADOR IR - ESTIMATIVA</span>
             </a>
-
-            <a href="https://planilhadefaturamneto.vercel.app" target="_blank" class="link">
-                <img src="fatura.png" alt="Ícone Sorteador De Cliente" class="icon">
-                PLANILHA DE FATURAMENTO
+                <div class="help-container">
+                <div class="help-icon" data-id="simulador">
+                <i class="bi bi-question"></i>
+                </div>
+                    <div class="tooltip">
+                    Use nosso simulador rápido e fácil para estimar seu imposto de renda, é apenas uma simulação! clique e experimente.
+                    <button class="como-usar-btn" data-id="simulador">Como Usar</button>
+                </div>
+                </div>
+            </div>
+<!--------------------------------------------------------------------->
+            <!-- link e imagem do INDICAÇAO-->
+            <div class="link">
+            <a href="https://indicaco-es.vercel.app" target="_blank" class="link-content">
+        <img id="bonus" src="bonus.png" alt="Ícone Gerenciador De Cliente" class="icon">
+            SISTEMA DE INDICAÇÃO
             </a>
-
-            <a href="https://t.me/bannerfuteboll" target="_blank" class="link">
-                <img src="telegrama.png" alt="Ícone Sorteador De Cliente" class="icon">
-                GRUPO DE BANNER {TELEGRAM}
+                <div class="help-container">
+                <div class="help-icon" data-id="indicacao">
+                <i class="bi bi-question"></i>
+                </div>
+                    <div class="tooltip">
+                    Gerencie indicações e distribua bônus com facilidade usando o sistema de bonificação VznPlay.
+                    <button class="como-usar-btn" data-id="indicacao">Como Usar</button>
+                </div>
+                </div>
+            </div>
+<!--------------------------------------------------------------------->
+            <!-- link e imagem do SORTEADOR -->
+            <div class="link">
+            <a href="https://sistema-sorteio.vercel.app" target="_blank" class="link-content">
+        <img id="logo" src="sorteio.png" alt="Ícone Gerenciador De Cliente" class="icon">
+            SORTEADOR ALEATORIO
             </a>
-
-
-
+                <div class="help-container">
+                <div class="help-icon" data-id="sorteador">
+                <i class="bi bi-question"></i>
+                </div>
+                    <div class="tooltip">
+                    Nosso site sorteia clientes aleatoriamente presenteia seus clientes de forma aleatória, clique para saber como usar.
+                    <button class="como-usar-btn" data-id="sorteador">Como Usar</button>
+                </div>
+                </div>
+            </div>
+<!--------------------------------------------------------------------->
+            <!-- link e imagem do PAPA TESTE -->
+            <div class="link">
+            <a href="https://t.me/antipapatesteiptvbot" target="_blank" class="link-content">
+        <img class="img-papa" src="papa-teste.png" alt="Ícone Gerenciador De Cliente" class="icon">
+            DENUNCIAR PAPA TESTE
+            </a>
+                <div class="help-container">
+                <div id="sumir" class="help-icon">
+                <i class="bi bi-question"></i>
+                </div>
+                    <div class="tooltip">
+                    Veja se um contato aleatório e um papa teste e o descarte!
+                </div>
+                </div>
+            </div>
+<!--------------------------------------------------------------------->
+            <!-- link e imagem do GRUPO DE GANNER NO TELEGRAM -->
+            <div class="link">
+            <a href="https://t.me/bannerfuteboll" target="_blank" class="link-content">
+        <img id="tele" src="telegrama.png" alt="Ícone Gerenciador De Cliente" class="icon">
+            <span id="crescer" class="font">GRUPO DE BANNER <span class="flesh">{TELEGRAM}</span></span>
+            </a>
+                <div class="help-container">
+                <div id="sumir"  class="help-icon">
+                <i class="bi bi-question"></i>
+                </div>
+                    <div class="tooltip">
+                    Entre em nosso grupo de banner e tenha acesso aos banner diário de futebol!
+                </div>
+                </div>
+            </div>
+<!--------------------------------------------------------------------->
         </section>
     </main>
 
@@ -70,6 +247,15 @@ gtag('config', 'G-37SVV7T9M3');
         <p>Vznplay © Todos os direitos reservados Desde 2022 / <span id="year"></span></p>
     </footer>
 
-    <script src="script.js"></script>
+
+<script src="script.js"></script>
+
+<script>
+if ('serviceWorker' in navigator) {
+navigator.serviceWorker.register('/service-worker.js');
+}
+</script>
+
 </body>
 </html>
+
