@@ -77,6 +77,9 @@ const popupConteudo = {
   },
     indicacao: {
     video: 'https://rumble.com/embed/v6s9s6t/?pub=4lwvh7'
+  },
+    funil: {
+    video: 'https://rumble.com/embed/v6tc69t/?pub=4lwvh7'
   }
 
   // Adicione mais vídeos aqui se precisar
@@ -117,6 +120,5 @@ document.querySelectorAll('.como-usar-btn, .help-icon').forEach(el => {
     }
   });
 });
-
 
 

@@ -147,6 +147,22 @@
             margin-left: -15px;
             margin-right: -5px;
         }
+        #bonus02{
+            width: 75px;
+            height: 73px;
+            margin-top: -4px;
+            margin-bottom: -4px;
+            margin-left: 0px;
+            margin-right: 8px;
+        }
+        #whatts{
+            width: 70px;
+            height: 70px;
+            margin-top: -5px;
+            margin-bottom: -5px;
+            margin-left: -6px;
+            margin-right: 8px;
+        }
         .help-icon .bi {
   animation: giroLento 5s infinite;
   display: inline-block;
@@ -159,7 +175,6 @@
   background-color: white; /* fundo branco ao redor do vídeo */
   margin-top: -10px;
         }
-
         /* Estilos para os tooltips */
         .help-icon {
             font-size: 1.8rem;
@@ -187,6 +202,11 @@
   box-shadow: 0 0 10px #fff;
         }
         .tooltip {
+
+    position: relative; /* ou absolute/fixed/sticky */
+    z-index: 9999 !important;
+    pointer-events: auto !important;
+
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.3s;
@@ -316,6 +336,7 @@
 }
 
 
+
 /* Rodapé */
 .footer {
             text-align: center;
@@ -368,6 +389,14 @@
             margin-left: -15px;
             margin-right: 0px;
             }
+            #bonus02{
+            width: 58px;
+            height: 58px;
+            margin-top: -4px;
+            margin-bottom: -4px;
+            margin-left: -5px;
+            margin-right: 8px;
+            }
             .font{
                 font-size: 13px;
             }
@@ -377,6 +406,11 @@
                 margin-left: -5px;
                 margin-top: -5px;
                 margin-bottom: -5px;
+            }
+            #whatts{
+            width: 55px;
+            height: 55px;
+            margin-right: 20px;
             }
             .ajust-img{
                 margin-right: 8px;
@@ -401,7 +435,6 @@
             .flesh{
                 display: none;
             }
-
             .link-section {
                 width: 100%;
                 max-width: 350px;
@@ -412,7 +445,6 @@
             .footer {
                 font-size: 0.7em;
             }
-            
             /* Ajustes para mobile nos tooltips */
             .help-icon {
                 width: 30px;
@@ -424,7 +456,9 @@
                 width: 150px;
                 font-size: 12px;
                 right: 30px;
+
             }
+
 
 
     /* Área branca do pop-up */
@@ -457,6 +491,7 @@
   border-radius: 8px;
   
 }
+
 
 
 }

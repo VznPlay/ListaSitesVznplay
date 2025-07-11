@@ -81,7 +81,7 @@ gtag('config', 'G-37SVV7T9M3');
         <section class="link-section">
 <!--------------------------------------------------------------------->
             <!-- Link e imagem da LOJA -->
-            <div class="link">
+            <div class="link confete">
             <a href="https://vznplay.vercel.app" target="_blank" class="link-content">
         <img id="Loja" src="vamos.png" alt="Ícone Loja Da Vznplay" class="icon">
         LOJA DA VZNPLAY
@@ -198,6 +198,23 @@ gtag('config', 'G-37SVV7T9M3');
                 </div>
             </div>
 <!--------------------------------------------------------------------->
+            <!-- link e imagem do FUNIL-->
+            <div class="link">
+            <a href="https://funil-vznplay.vercel.app" target="_blank" class="link-content">
+        <img id="bonus02" src="funil.webp" alt="Ícone Gerenciador De Cliente" class="icon">
+            FUNIL DE ORGANIZAÇÃO
+            </a>
+                <div class="help-container">
+                <div class="help-icon" data-id="funil">
+                <i class="bi bi-question"></i>
+                </div>
+                    <div class="tooltip">
+                    Organize etapas de vendas com clareza e controle, funil de vendas e Organização da vznplay.
+                    <button class="como-usar-btn" data-id="funil">Como Usar</button>
+                </div>
+                </div>
+            </div>
+<!--------------------------------------------------------------------->
             <!-- link e imagem do SORTEADOR -->
             <div class="link">
             <a href="https://sistema-sorteio.vercel.app" target="_blank" class="link-content">
@@ -212,6 +229,23 @@ gtag('config', 'G-37SVV7T9M3');
                     Nosso site sorteia clientes aleatoriamente presenteia seus clientes de forma aleatória, clique para saber como usar.
                     <button class="como-usar-btn" data-id="sorteador">Como Usar</button>
                 </div>
+                </div>
+            </div>
+<!--------------------------------------------------------------------->
+            <!-- Link e imagem SUGESTAO -->
+            <div class="link destacado">
+                <div class="glow-overlay"></div>     <!-- Luz andando agora no quadrado -->
+            <a href="https://sugestoes.vercel.app" target="_blank" class="link-content">
+        <img id="Loja" src="sugestoes.png" alt="Ícone Loja Da Vznplay" class="icon">
+        SUGESTÕES DE FERRAMENTAS
+            </a>
+                <div class="help-container">
+                <div id="sumir"  class="help-icon">
+                <i class="bi bi-question"></i>
+                </div>
+                    <div class="tooltip">
+                    Compartilhe uma ideia de site ou proponha melhorias para aperfeiçoar nossas ferramentas.
+        </div>
                 </div>
             </div>
 <!--------------------------------------------------------------------->
@@ -231,11 +265,27 @@ gtag('config', 'G-37SVV7T9M3');
                 </div>
             </div>
 <!--------------------------------------------------------------------->
-            <!-- link e imagem do GRUPO DE GANNER NO TELEGRAM -->
+            <!-- link e imagem do GRUPO DE BANNER NO TELEGRAM -->
             <div class="link">
             <a href="https://t.me/bannerfuteboll" target="_blank" class="link-content">
         <img id="tele" src="telegrama.png" alt="Ícone Gerenciador De Cliente" class="icon">
             <span id="crescer" class="font">GRUPO DE BANNER <span class="flesh">{TELEGRAM}</span></span>
+            </a>
+                <div class="help-container">
+                <div id="sumir"  class="help-icon">
+                <i class="bi bi-question"></i>
+                </div>
+                    <div class="tooltip">
+                    Entre em nosso grupo de banner e tenha acesso aos banner diário de futebol!
+                </div>
+                </div>
+            </div>
+<!--------------------------------------------------------------------->
+            <!-- link e imagem do GRUPO DE BANNER NO WHATSAPP -->
+            <div class="link">
+            <a href="https://chat.whatsapp.com/CASqUqwgzsn4WtxzrbSF9N?mode=ac_c" target="_blank" class="link-content">
+        <img id="whatts" src="logo whatsapp.png" alt="Ícone Gerenciador De Cliente" class="icon">
+            <span id="crescer" class="font">GRUPO DE BANNER <span class="flesh">{WHATSAPP}</span></span>
             </a>
                 <div class="help-container">
                 <div id="sumir"  class="help-icon">
@@ -255,13 +305,123 @@ gtag('config', 'G-37SVV7T9M3');
         <p>Vznplay © Todos os direitos reservados Desde 2022 / <span id="year"></span></p>
     </footer>
 
-
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 <script src="script.js"></script>
 
 <script>
+
+document.addEventListener('DOMContentLoaded', function() {
+    // 1. Criar o elemento de luz
+    const glow = document.createElement('div');
+    glow.className = 'glow-effect'; // Adiciona classe para facilitar controle
+    glow.style.cssText = `
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 15%;
+        height: 100%;
+        background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.7), rgba(255,255,255,0));
+        transform: skewX(-25deg);
+        z-index: 1;
+        pointer-events: none;
+    `;
+
+    // 2. Adicionar a todos os elementos destacados
+    const destacados = document.querySelectorAll('.destacado');
+    
+    destacados.forEach(destacado => {
+        // Configuração do container
+        destacado.style.position = 'relative';
+        destacado.style.overflow = 'hidden';
+        
+        // Insere o efeito de luz
+        destacado.insertBefore(glow.cloneNode(true), destacado.firstChild);
+        
+        // Garante que o conteúdo fique acima do efeito
+        const linkContent = destacado.querySelector('.link-content');
+        if (linkContent) {
+            linkContent.style.position = 'relative';
+            linkContent.style.zIndex = '2';
+        }
+        
+        // Garante que o ícone de ajuda fique acessível
+        const helpIcons = destacado.querySelectorAll('.help-icon');
+        helpIcons.forEach(icon => {
+            icon.style.position = 'relative';
+            icon.style.zIndex = '0';
+        });
+    });
+
+    // 3. Animação com temporização personalizada (4.5s animação + 10s pausa)
+    function animateGlow() {
+        const glowElements = document.querySelectorAll('.glow-effect');
+        
+        glowElements.forEach(glow => {
+            let pos = -100;
+            let isAnimating = false;
+            let animationFrame;
+            
+            function startAnimation() {
+                if (!isAnimating) {
+                    isAnimating = true;
+                    const startTime = Date.now();
+                    const duration = 4500; // 4.5 segundos de animação
+                    
+                    function frame() {
+                        const elapsed = Date.now() - startTime;
+                        const progress = Math.min(elapsed / duration, 1);
+                        pos = -100 + (250 * progress);
+                        glow.style.left = pos + '%';
+                        
+                        if (progress < 1) {
+                            animationFrame = requestAnimationFrame(frame);
+                        } else {
+                            isAnimating = false;
+                            // Espera 10 segundos antes de recomeçar
+                            setTimeout(startAnimation, 10000);
+                        }
+                    }
+                    
+                    frame();
+                }
+            }
+            
+            // Inicia a primeira animação
+            setTimeout(startAnimation, Math.random() * 5000); // Início aleatório para múltiplos elementos
+        });
+    }
+    
+    // Inicia o sistema de animação
+    animateGlow();
+
+    // 4. Mantém a funcionalidade original do ícone de ajuda
+    document.querySelectorAll('.help-icon').forEach(icon => {
+        icon.addEventListener('click', function(e) {
+            e.stopPropagation();
+            // Sua lógica original para o tooltip aqui
+            const tooltip = this.closest('.help-container').querySelector('.tooltip');
+            tooltip.classList.toggle('show');
+        });
+    });
+});
+
+
+
+
+
+
 if ('serviceWorker' in navigator) {
 navigator.serviceWorker.register('/service-worker.js');
 }
+
+document.querySelector('.confete').addEventListener('mouseenter', () => {
+    confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 }
+    });
+});
+
 </script>
 
 </body>
