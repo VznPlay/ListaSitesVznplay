@@ -58,28 +58,28 @@ document.querySelectorAll('.help-container').forEach(container => {
 // Conteúdo dos popups com links do Rumble
 const popupConteudo = {
   facilitador: {
-    video: 'https://rumble.com/embed/v6rwior/?pub=4lwvh7'
+    video: 'https://www.dailymotion.com/embed/video/x9n8hz6'
   },
     anuidade: {
-    video: 'https://rumble.com/embed/v6rwj55/?pub=4lwvh7'
+    video: 'https://www.dailymotion.com/embed/video/x9n8hze'
   },
     macs: {
-    video: 'https://rumble.com/embed/v6rwjcf/?pub=4lwvh7'
+    video: 'https://www.dailymotion.com/embed/video/x9n8hzc'
   },
     planilhas: {
-    video: 'https://rumble.com/embed/v6rwjep/?pub=4lwvh7'
+    video: 'https://www.dailymotion.com/embed/video/x9n8hz4'
   },
     simulador: {
-    video: 'https://rumble.com/embed/v6rwjg7/?pub=4lwvh7'
+    video: 'https://www.dailymotion.com/embed/video/x9n8hz2'
   },
     sorteador: {
-    video: 'https://rumble.com/embed/v6rwji1/?pub=4lwvh7'
+    video: 'https://www.dailymotion.com/embed/video/x9n8hza'
   },
     indicacao: {
-    video: 'https://rumble.com/embed/v6s9s6t/?pub=4lwvh7'
+    video: 'https://www.dailymotion.com/embed/video/x9n8ida'
   },
     funil: {
-    video: 'https://rumble.com/embed/v6tc69t/?pub=4lwvh7'
+    video: 'https://www.dailymotion.com/embed/video/x9n8hz8'
   }
 
   // Adicione mais vídeos aqui se precisar
