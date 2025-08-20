@@ -2,8 +2,6 @@
         document.getElementById("year").textContent = new Date().getFullYear();
 
 
-
-
         // Adicionar evento de clique para mobile
         // Comportamento do help-icon (? botão)
 document.querySelectorAll('.help-icon').forEach(icon => {
@@ -51,8 +49,6 @@ document.querySelectorAll('.help-container').forEach(container => {
     });
   }
 });
-
-
 
 
 // Conteúdo dos popups com links do Rumble
