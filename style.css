@@ -34,7 +34,7 @@
         }
         .marquee-container {
             display: flex;
-            animation: marquee 30s linear infinite;
+            animation: marquee 80s linear infinite;
         }
         .marquee-text {
             white-space: nowrap;
